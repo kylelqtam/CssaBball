@@ -2,38 +2,94 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>My RESTful API</title>
-        <link href="assets/css/style2.css" type="text/css" rel="stylesheet">
+        <title>CSSA BBall</title>
+        <link href="../css/style.css" type="text/css" rel="stylesheet">
         <script type="text/javascript" src="./assets/scripts/jquery-2.2.4.min.js" defer></script><!-- jQuery should be first -->
         <script type="text/javascript" src="./assets/scripts/script.js" defer></script>
     </head>
     
     <body>
-        
-        <header>
-            <h1>My RESTful API: NY times datas</h1>
-        </header>
-        
-        <main>
-            <p id="menu">
-                <button id = "all_articles">All articles</button>
-                <button id = "list_authors">List all known authors</button>
-                <button id = "list_url">List all article short URLs</button>
-                <button id = "list_des_facet">Article Tags</button>
-                <button id = "details">Detail of article #:</button>
-                <input id = "detail_in" type="integer" size="5"></input>
-                <button id = "hyperlinks">Hyperlinks</button>   
-            </p>
-            
-            <section id="results"></section><!-- #topthree -->
+        <nav id="main-nav">
+            <ul>
+                <li class="element-search">
+                    <a href="#" id="shifter" title="Shift your shift, shifter">
+                        Photos
+                    </a>
+                </li>
+                <li class="element-messages">
+                    <a href="messages" id="message" title="Messages">
+                        Team info
+                    </a>
+                </li>
+                <li class="element-notifications notifElement">
+                    <a href="#" id="notification" class="attention" title="Notifications">
+                        Upcoming Games
+                    </a>
+                </li>
+                <li class="element-notifications notifElement">
+                    <a href="#" id="notification" class="attention" title="Notifications">
+                        Profile
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main id="main">
+            <section id="scoreboard">
+                <ul id="gamelist">
+                    <li><span>them: 89</span><span>us: 99</span></li>
+                    <li><span>them: 89</span><span>us: 99</span></li>
+                    <li><span>them: 89</span><span>us: 99</span></li>
+                    <li><span>them: 89</span><span>us: 99</span></li>
+                    <li><span>them: 89</span><span>us: 99</span></li>
+                    <li><span>them: 89</span><span>us: 99</span></li>
+                    <li><span>them: 89</span><span>us: 99</span></li>
+                    <li><span>them: 89</span><span>us: 99</span></li>
+                </ul>
+            </section>
+            <section id="photobooth">
+                <section id="main_photo">
+                    <img src="../images/img7.jpeg">
+                </section>
+                <aside id="photo_dock"><ul id="pic_list">
+                    <img src="../images/img1.jpeg">
+                    <img src="../images/img2.jpeg">
+                    <img src="../images/img3.jpeg">
+                    <img src="../images/img4.jpeg">
+                    <img src="../images/img5.jpeg">
+                    <img src="../images/img6.jpeg">
+                    <img src="../images/img7.jpeg">
+                </ul></aside>
+            </section>
+            <section id="team_info">
+                <article>
+                </article>
+            </section>
+            <section class="sections-profile" id="section-current-history">
+                <ul id="list-current-history">
+                    <li class="li-current-history sectionHeading">History</li>
+                </ul>
+                <section id="section-history">
+                    <ul class="list-status" id="list-history-status">
+                    </ul>
+                </section>
+            </section>
+            <section class="sections-profile" id="section-friends">           
+                <select name="searchFriendsOpt" id="sortFriendsOpt">
+                    <option value="do_nothing">👇 Select a Sort..</option>
+                    <option value="name">👉 by Name</option>
+                    <option value="rate">👉 by Rating</option>
+                    <option value="jobs">👉 by Shifts Covered</option>
+                </select>
+                <ul id="list-friends">No friends/coworkers yet :(</ul>
+            </section>
         </main>
-        
-        <footer>
-            <p>
-                Author: Kyle L.Q. Tam 
-                Copyright: data from New York times
-            </p>
-        </footer>
-        
+        <section class="sections-profile" id="sec_app_position">
+            <h2>Please select position to apply to</h2>
+            <h2>For store: <span id='applyToStoreName'></span></h2>
+            <select name="searchFriendsOpt" id="position_choice"></select>
+            <button id="apply_cancel_button" class="buttonStyle">Cancel</button>
+            <button id="apply_choice_button" class="buttonStyle">Apply!</button>
+        </section>
+        </div> 
     </body>
 </html> 

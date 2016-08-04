@@ -1,9 +1,185 @@
-html, body {
-	margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-	margin-bottom: 0;
-    height: 100%;
-    text-align: center;
-    background-color: aquamarine;
+/* First we start with the big picture, setting general fonts and colours*/
+main {
+    margin-top: 90px; /* Have a margin on top so wont be covered by the menu used px instead of % for stability*/
+    background: white;
+    color: #330033;
+    font-family: "Lucida Console", Monaco, sans-serif;
 }
+main a{
+    color: magenta;
+}
+
+footer a{
+    color: magenta;
+}
+
+h1 {
+  font-family: Verdana, Arial, sans-serif;
+}
+
+/* Header 2 is the main visual section dividers so needs to draw cleer boarderlines. p.s. background image has bigger height than needed so it always cover the whole height. */
+h2 {
+    border-bottom: solid 2px darkmagenta;
+    border-top: solid 2px darkmagenta;
+    color: white;
+    background-image: url(../image/images.jpeg);
+    background-size: 80% 80px;
+    background-repeat: no-repeat;
+}
+
+/* On click effects */
+a:visited{
+    color: darkblue;
+}
+
+a:hover{
+    color: mediumblue;
+}
+
+/* The menu on top with fixed position, used px instead of % for stability*/
+#main-nav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 80px;
+    width: 100%;
+    background-color: #000000;
+    opacity: 0.7;
+}
+#main-nav ul{
+    margin: 0;
+    height: 100%;
+    list-style: none;
+}
+#main-nav li{
+    float: right;
+    margin: 1.5em;
+    height: 30px;
+    margin: 0;
+    padding: 30px 40px 20px 40px;
+    width: auto;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 16px;
+    background-color: inherit;
+    -webkit-transition: all 0.8s ease-out;
+    -moz-transition: all 0.8s ease-out;
+    -o-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out;
+    align-content: center;
+    border-radius: 9px;
+}
+#main-nav a {
+    color: azure;
+}
+
+#main-nav li:hover { 
+    background-color: #333333;
+    opacity: 1.0;
+}
+
+#to-top img{
+    width: 0%;
+    height: 0%;
+}
+
+#scoreboard{
+    margin: 10px 0px 10px 0px;
+    height: 50px;
+}
+
+#gamelist{
+    margin: 0px 0px 0px 0px;
+    margin-top: 0;
+    height: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+#gamelist li{
+    height: 100%;
+}
+
+#gamelist li{
+    display: inline-block;
+    padding-right: 20px;
+    border-radius: 7px;
+    background-color: darkgray;
+}
+
+#photobooth{
+    height: 500px;
+    background-color: dimgray;
+}
+
+#photo_dock{
+    float: right;
+    height: 100%;
+    background-color: black;
+    width: 25%;
+    display: inline-block;
+    overflow: auto;
+}
+
+#photo_dock img{
+    float: right;
+    margin: 5px 5px 5px 0px;
+    height: auto;
+    width: 97%;
+    display: inline-block;
+    overflow: auto;
+}
+
+#main_photo img{
+    display: inline-block;
+    margin: 15px 0px 15px 15px;
+    height: 470px;
+    width: 93%;
+    align-self: center;
+}
+
+#main_photo {
+    display: inline-block;
+    width: 74%;
+    align-content: center;
+}
+
+
+@media screen and (max-width: 768px){
+    /* Settings for small screens. Since if menu follows a lot of scrren might be blocked so I made it static*/
+    #main-nav{
+        position: static;
+    }
+    
+    main {
+        margin-top: 0;
+        font-size: 9.5px;
+    }
+    
+    h2{
+        background-size: 100% 80px;
+    }
+    
+    #main-nav a{
+        float: left; margin: 2%;
+        text-align: center;
+        color: #330033;
+        font-family: Verdana, Arial, sans-serif;
+        font-size: 16px;
+        width: 96%;
+        background-color: plum;
+    }
+    
+    
+    /* And then add a to top button to go back to the top menu*/
+    #to-top{
+        position: fixed;
+        right: -15%;
+        top: 10%;
+    }
+    
+    #to-top img{
+        border-radius: 60%;
+        width: 40%;
+        height: 40%;
+    }
+} 
+/*Done*/
